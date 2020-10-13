@@ -45,7 +45,15 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             <Typography color="textSecondary" gutterBottom>
               Recovered
             </Typography>
-            <Typography variant="h5">REAL DATA</Typography>
+            <Typography variant="h5">
+              {/* apply countUp dynamically to showcase the amount of recovered poeple */}
+              <CountUp
+                start={0}
+                end={recovered.value}
+                duration={2.5}
+                seperator=","
+              />
+            </Typography>{" "}
             <Typography color="textSecondary">REAL DATE</Typography>
             <Typography variant="body2">
               Number of recovered cases from COVID 19
@@ -57,7 +65,15 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             <Typography color="textSecondary" gutterBottom>
               Deaths
             </Typography>
-            <Typography variant="h5">REAL DATA</Typography>
+            <Typography variant="h5">
+              {/* apply countUp dynamically to showcase the amount of deceased people */}
+              <CountUp
+                start={0}
+                end={deaths.value}
+                duration={2.5}
+                seperator=","
+              />
+            </Typography>{" "}
             <Typography color="textSecondary">REAL DATE</Typography>
             <Typography variant="body2">
               Number of deaths cases from COVID 19

@@ -24,7 +24,7 @@ class App extends React.Component {
     this.setState({ data: fetchedData });
   }
   render() {
-    // create a variable and  deconstruct the data from the state
+    // create a variable and deconstruct the data from the state
     const { data } = this.state;
     return (
       <div className={styles.container}>
