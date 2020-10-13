@@ -3,6 +3,8 @@ import React from "react";
 import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 import styles from "./Cards.module.css";
 import CountUp from "react-countup";
+// import cx for handling multiple classnames inside the materialUI items
+import cx from "classnames";
 
 /* create an arrow function called Cards holding the destructered data
 from the data prop */
@@ -15,7 +17,13 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     <div className={styles.container}>
       {/* use the materialUI library to create a card with built-in styling */}
       <Grid container spacing={3} justify="center">
-        <Grid item component={Card}>
+        <Grid
+          item
+          component={Card}
+          xs={12}
+          md={3}
+          className={cx(styles.card, styles.infected)}
+        >
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
               Infected
@@ -40,7 +48,13 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             </Typography>
           </CardContent>
         </Grid>
-        <Grid item component={Card}>
+        <Grid
+          item
+          component={Card}
+          xs={12}
+          md={3}
+          className={cx(styles.card, styles.recovered)}
+        >
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
               Recovered
@@ -60,7 +74,13 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             </Typography>
           </CardContent>
         </Grid>
-        <Grid item component={Card}>
+        <Grid
+          item
+          component={Card}
+          xs={12}
+          md={3}
+          className={cx(styles.card, styles.deaths)}
+        >
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
               Deaths
