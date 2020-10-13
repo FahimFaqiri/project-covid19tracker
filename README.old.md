@@ -8,6 +8,7 @@ Libraries-> React.js -> Chart.js -> Material UI
 
 * After finishing this project i will hope to showcase it as a static webpage so people will understand the current pandemic situation.
 
-* The project is currently a working progress.
+* The project is currently able to fetch the desired api, next via props i will share the api data and put it in the cards,
+and with the Material Ui and Charts.js i will display the info.
 
 * This website will be deployed so check that out too!
