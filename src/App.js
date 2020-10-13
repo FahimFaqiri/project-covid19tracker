@@ -5,8 +5,9 @@ import { Cards, Chart, CountryPicker } from "./components";
 import styles from "./App.module.css";
 import { fetchData } from "./api";
 
+// create a class which extends the react component
 class App extends React.Component {
-  // set the fetched data in the state
+  // set the intitial state
   state = {
     // create an object called data thats unpopulated
     data: {},
