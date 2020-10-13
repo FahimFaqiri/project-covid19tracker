@@ -21,3 +21,14 @@ export const fetchData = async () => {
     // executed if fetch is unsuccesfull
   }
 };
+
+// create an asynchronous function called fetchDailyData
+export const fetchDailyData = async () => {
+  // add some exception handling
+  try {
+    // create a deconstructed variable called data holding the fetching the daily info
+    const { data } = await axios.get(`${url}/daily`);
+
+    console.log(data);
+  } catch (error) {}
+};
